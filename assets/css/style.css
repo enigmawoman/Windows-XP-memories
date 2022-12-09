@@ -1,0 +1,169 @@
+:root {
+--dark: purple;
+--light: white;
+--blue1: rgb(34, 92, 220);
+--blue2: rgb(57, 128, 244);
+--blue3: #3a71af;
+--blue4: rgb(57, 153, 238);
+--green1:#669937;
+--green2: #7dc343;
+--darkgrey: rgb(67, 67, 67);
+--offwhite:#e4e3e3; 
+--white: #ffffff;
+}
+
+/* universal styling */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* this creates smooth scrolling from links to content */
+html{scroll-behavior: smooth;}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+background-image: url(../images/windows-xp-wallpaper-bliss.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color: var(--blue1);
+}
+
+#desktop-icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 90vh;
+    width: 10vw;
+    margin-left: 10px;
+}
+
+#desktop-icons img {
+    width: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#desktop-icons p {
+    font-size: 10px;
+    text-align: center;
+    color: var(--offwhite);
+    text-shadow: 0px 2px 2px var(--darkgrey);
+}
+
+#taskbar {
+background-color: var(--blue1);
+position: fixed;
+bottom: 0px;
+left: 0px;
+width: 100vw;
+height: 40px;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+box-shadow: 0px -2px var(--blue3);
+}
+
+#start-btn {
+    display: flex;
+    padding: 3px;
+    height: 40px;
+    width: 100px;
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: radial-gradient(var(--green2), var(--green1));
+    align-items: center;
+    border: 5px solid #669937;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    justify-content: center;
+
+}
+
+#start-btn img {
+    max-height: 20px;
+    padding-right: 5px;
+    
+}
+
+#start-btn p {
+    padding-right: 5px;
+    text-shadow: 1px 1px var(--darkgrey);
+    font-size: 20px;
+}
+
+#quick-task{
+    display: flex;
+    width: 110px;
+    margin: 3px;
+    padding: 3px;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#quick-task img {
+    max-width: 20px;
+    max-height: 20px;
+    margin: 2px;
+}
+
+.tab {
+    display: flex;
+    width: 170px;
+    margin: 3px;
+    padding: 3px;
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--blue2);
+    align-items: center;
+    border-radius: 3px;
+    
+}
+
+.tab img {
+    max-height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tab p {
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+#side-menu {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    right: 0px;
+    height: 40px;
+    width: 220px;
+    margin-right: 5px;
+    color: var(--white);
+    background-color: var(--blue4);
+    border-radius: 3px;
+}
+
+#side-menu p {
+    margin: 10px;
+}
+
+#side-menu img {
+    max-height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#arrow-exp {
+    background-color: var(--blue4);
+    width:30px;
+}

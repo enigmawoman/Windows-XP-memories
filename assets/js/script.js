@@ -4,8 +4,8 @@ var desktopBackground = document.getElementById("desktop-background")
 var loginImage = document.getElementById("login-image")
 var startImage = document.getElementById("start-image")
 
-var secondsRemaining = 0;
-var timerCountdown;
+
+// var timerCountdown = setTimeout(desktopWXP, 7000);
 
 function playSoundlogin() {
     let newLogin = new Audio ('./assets/sounds/windows-xp-startup-sound/windows-xp-startup-sound.mp3');
@@ -21,26 +21,16 @@ function init () {
 
 init();
 
+
 function startPage() {
     login.style.display = 'none';    
     startUp.style.display = 'block'; 
     desktopBackground.style.display = 'none'; 
 
-    secondsRemaining = 7;
-  
-    timerCountdown = setInterval(function() {
-
-        if (secondsRemaining > 5) {
-            playSoundlogin();
-        } else if (secondsRemaining = 0) {
-            desktopWXP()
-        }
-        secondsRemaining--;
-    }, 1000);
-    
-    
-    
+    playSoundlogin();
+    setTimeout(desktopWXP, 5000);
 }
+
   
 function desktopWXP() {
     login.style.display = 'none';    

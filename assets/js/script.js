@@ -6,6 +6,7 @@ var startImage = document.getElementById("start-image")
 
 
 // var timerCountdown = setTimeout(desktopWXP, 7000);
+init();
 
 function playSoundlogin() {
     let newLogin = new Audio ('./assets/sounds/windows-xp-startup-sound/windows-xp-startup-sound.mp3');
@@ -18,8 +19,6 @@ function init () {
     startUp.style.display = 'none'; 
     desktopBackground.style.display = 'none';   
 }
-
-init();
 
 
 function startPage() {
@@ -36,9 +35,20 @@ function desktopWXP() {
     login.style.display = 'none';    
     startUp.style.display = 'none'; 
     desktopBackground.style.display = 'block'; 
+
+    currentDay
 }
 
 
+let currentDay = function() {
+    document.querySelector("current-time").innerHTML =`
+    <h5>${moment().format('MMMM Do YYYY, HH:mm:ss a')}</h5>`;
 
+};
+
+function clock() {
+    currentDay();
+    setInterval(currentDay, 1000);
+};
 
 loginImage.addEventListener("click", startPage);

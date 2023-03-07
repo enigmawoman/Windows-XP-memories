@@ -26,7 +26,7 @@ function startPage() {
     startUp.style.display = 'block'; 
     desktopBackground.style.display = 'none'; 
 
-    playSoundlogin();
+    
     setTimeout(desktopWXP, 5000);
 }
 
@@ -36,6 +36,8 @@ function desktopWXP() {
     startUp.style.display = 'none'; 
     desktopBackground.style.display = 'block'; 
 
+    playSoundlogin();
+    
     currentDay
 }
 
